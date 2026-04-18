@@ -741,7 +741,7 @@ TOP 2 PRIORITY SKILLS: ${topGapSkills.slice(0,2).map(s=>`${s.skill} (you: ${s.se
 Write exactly 2 sentences. Sentence 1: one strength + the biggest gap in plain language. Sentence 2: the 2 priority skills to focus on, end with encouragement. Use "you/your". No bullet points. Under 60 words total.`;
 
     try {
-      const res = await fetch("http://localhost:3001/api/claude", {
+      const res = await fetch("/api/claude", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
